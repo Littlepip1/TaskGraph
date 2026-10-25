@@ -1,0 +1,18 @@
+[
+  {
+    "repository": "https://github.com/mysteryelder/HYGMA",
+    "commit": "b0a0432441bc1fe5cf47725a793125699dc1959c",
+    "source_path": "src/utils/dynamic_clustering.py",
+    "local_path": "official_modules/HYGMA/dynamic_clustering.py",
+    "sha256": "bff8969219630b89899a54c227a04f92257f063b8415c3e2143b8a8339ad59fd",
+    "scope": "communication structure module adaptation; not full trained policy reproduction"
+  },
+  {
+    "repository": "https://github.com/LXXXXR/ExpoComm",
+    "commit": "25dc9729c0ac65a283ae76977cfbec6df41249c0",
+    "source_path": "src/controllers/ExpoComm_controller.py",
+    "local_path": "official_modules/ExpoComm/ExpoComm_controller.py",
+    "sha256": "29a4425b006f77eac7c08ebe6e4c948daf9ee6e80add9af92d920379304cca74",
+    "scope": "communication structure module adaptation; not full trained policy reproduction"
+  }
+]

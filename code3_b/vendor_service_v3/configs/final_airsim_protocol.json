@@ -1,0 +1,68 @@
+{
+  "version": "TASKGRAPH-MSC-FINAL-AIRSIM-1.0",
+  "goal": "Minimal frozen external-dynamics validation after the corrected final software batch. Validate N=64 TaskGraph-MSC against Uniform-global in AirSim without reopening algorithm development.",
+  "agents": 64,
+  "task": "single moving target on a circular path; 64 tracker multirotors; truth-driven anisotropic noisy local observation adapter; fixed controller",
+  "network_mode": "queue_normal",
+  "capacity_bits_per_link_tick": 4096,
+  "methods": ["uniform_global", "r8_final"],
+  "frozen_r8_gate": {
+    "gain_threshold": 0.102,
+    "nis_threshold": 4.1,
+    "uncertainty_guard_m": 6.0,
+    "max_silence_ticks": 32,
+    "efficiency_threshold": 0.0
+  },
+  "frozen_r8_pressure": {
+    "opportunity_period": 16,
+    "replay_lag": 32,
+    "age_window": 32,
+    "pressure_strength": 1.0
+  },
+  "frozen_r8_scope": {
+    "routine_fanout": 32,
+    "critical_fanout": 48,
+    "critical_reasons": ["innovation_guard", "uncertainty_guard"],
+    "recipient_rule": "balanced diverse circulant"
+  },
+  "replay_lag_ticks": 32,
+  "primary_reward_gap_tolerance": 0.01,
+  "smoke": {
+    "seed": 2710209000,
+    "steps": 40,
+    "methods": ["uniform_global", "r8_final"],
+    "planned_episodes": 2,
+    "purpose": "integrity only: 65 vehicles, physical-clock closure, network accounting, and bounded-scope activation; no reward-based tuning"
+  },
+  "heldout": {
+    "seeds": [2710210000, 2710210001, 2710210002, 2710210003, 2710210004, 2710210005],
+    "steps": 160,
+    "methods": ["uniform_global", "r8_final"],
+    "planned_episodes": 12
+  },
+  "primary_external_consistency_rule": "For the six paired held-out seeds, report paired 95% Student-t intervals. External consistency is supported if TaskGraph-MSC reward-gap CI upper <= 0.01 and serviced bit-hop saving CI lower > 0. This AirSim result is secondary external-validity evidence; the 12-seed corrected software batch remains the primary statistical evidence.",
+  "mechanism_checks": [
+    "clock audit contains one valid 0.5-s physical advance for every control tick",
+    "recipient accounting closes exactly",
+    "TaskGraph-MSC has at least one scheduled hyperedge with selected recipient count < reachable recipient count",
+    "routine/critical fanout never exceeds frozen 32/48 caps"
+  ],
+  "secondary_metrics": [
+    "formation error",
+    "target-estimation error",
+    "oracle-action error",
+    "delivery age",
+    "pending/expired recipient fractions",
+    "queue work",
+    "send fraction",
+    "selected recipient count",
+    "collision events (descriptive only)"
+  ],
+  "scope_decisions": [
+    "Only N=64 is run because the AirSim purpose is to validate the scale at which bounded recipient hyperedges are active.",
+    "Only normal capacity is run because the corrected software experiment already establishes the low-bandwidth fidelity-scalability boundary; duplicating that stress grid in AirSim would add large runtime without changing the primary claim.",
+    "Pressure-global, Fixed-diverse-40, and Static-7/8 are omitted from AirSim because the corrected software batch already isolates those mechanisms. AirSim tests transfer of the frozen final method against the dense reference, not another ablation study.",
+    "No threshold, pressure, deadline, fanout, controller, seed, task, or capacity changes are allowed after inspecting held-out AirSim results."
+  ],
+  "estimated_runtime_note": "Stage2 measured roughly 37 wall-clock minutes for one 160x0.5-s N=64 episode on the user's setup. The held-out matrix is therefore 12 episodes rather than the earlier 48-episode plan; plus two 40-step integrity smoke episodes."
+}

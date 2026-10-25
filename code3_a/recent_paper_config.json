@@ -1,0 +1,19 @@
+{
+  "cases": [[64,1,"static"],[128,4,"overlap"],[256,8,"overlap"],[128,4,"switch"]],
+  "families": ["SP","MIS"],
+  "capacities": [4096,256],
+  "steps": 240,
+  "eval_start": 20,
+  "prep": 32,
+  "graph_iterations": 24,
+  "graph_training_steps": 96,
+  "graph_training_seeds": [2710749000,2710749001,2710749002],
+  "graph_service_weights": [0.005,0.02,0.05],
+  "evidence_thresholds": [0.0,0.05,0.2,0.5],
+  "group_multipliers": [1,2],
+  "development_seeds": [2710740000,2710740001,2710740002],
+  "evaluation_seeds": [2710751000,2710751001,2710751002,2710751003,2710751004,2710751005,2710751006,2710751007,2710751008,2710751009,2710751010,2710751011],
+  "development_margin": 0.008,
+  "tolerance": 0.01
+}
+

@@ -1,0 +1,54 @@
+{
+  "source_hash": "54361d89ebff09df89aa4f5a552d6b6d2f20de2a54441ca2e09e7fc8cc66ebde",
+  "unit_tests": 19,
+  "smoke_training_episodes": 12,
+  "smoke_development_episodes": 48,
+  "smoke_evaluation_episodes": 128,
+  "smoke_execution_failures": 0,
+  "resume_cached_development": 48,
+  "resume_cached_evaluation": 128,
+  "scale_checks": [
+    {
+      "method": "commformer_idea",
+      "n": 256,
+      "q": 8,
+      "seconds": 5.0667924029999085,
+      "accounting_difference": 0,
+      "policy_calls": 265
+    },
+    {
+      "method": "t2mac_idea",
+      "n": 256,
+      "q": 8,
+      "seconds": 4.579539710000063,
+      "accounting_difference": 0,
+      "policy_calls": 273
+    },
+    {
+      "method": "hygma_group",
+      "n": 256,
+      "q": 8,
+      "seconds": 3.8207571809998626,
+      "accounting_difference": 0,
+      "policy_calls": 258
+    },
+    {
+      "method": "expocomm_static",
+      "n": 256,
+      "q": 8,
+      "seconds": 2.8642496339998615,
+      "accounting_difference": 0,
+      "policy_calls": 279
+    },
+    {
+      "method": "expocomm_one_peer",
+      "n": 256,
+      "q": 8,
+      "seconds": 2.042126004000238,
+      "accounting_difference": 0,
+      "policy_calls": 280
+    }
+  ],
+  "formal_2112_episode_study_executed": false,
+  "verification_scope": "Software execution and accounting only; not comparative performance evidence"
+}

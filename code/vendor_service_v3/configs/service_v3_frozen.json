@@ -1,0 +1,8 @@
+{
+  "omission_fraction": 0.1,
+  "absolute_event_budget": 1e-06,
+  "uncertainty_guard_m": 6.0,
+  "uncertainty_weight": 1.0,
+  "use_backward_pruning": true,
+  "numerical_tolerance": 1e-12
+}

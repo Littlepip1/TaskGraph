@@ -1,0 +1,9 @@
+{
+  "audited_episodes": 480,
+  "independently_recomputed_intervals": 480,
+  "source_hash": "736e6fa9fc4ed062e865fa786d5ba611a9369725a45c2a145f9936cf9a725047",
+  "all_expected_jobs_present": true,
+  "paired_warmup_and_schedule_match": true,
+  "service_subtraction_correct": true,
+  "accounting_failures": 0
+}

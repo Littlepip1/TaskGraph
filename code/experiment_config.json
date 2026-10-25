@@ -1,0 +1,21 @@
+{
+  "steps": 240,
+  "eval_start": 20,
+  "smoke_steps": 48,
+  "sizes": [64, 128, 256],
+  "local_group_size": 32,
+  "families": ["SP", "MIS"],
+  "capacities": [4096, 256],
+  "development_seeds": [2710700000, 2710700001, 2710700002],
+  "evaluation_seeds": [2710710000, 2710710001, 2710710002, 2710710003, 2710710004, 2710710005, 2710710006, 2710710007, 2710710008, 2710710009, 2710710010, 2710710011],
+  "development_fractions": [0.0, 0.1, 0.25, 0.4],
+  "absolute_event_budget": 0.0,
+  "preparation_steps": 32,
+  "deadline_steps": 32,
+  "opportunity_period": 16,
+  "context_lags": [0, 8, 16],
+  "development_margin": 0.008,
+  "reward_tolerance": 0.01,
+  "save_event_logs": false
+}
+

@@ -1,0 +1,31 @@
+{
+  "source_hash": "736e6fa9fc4ed062e865fa786d5ba611a9369725a45c2a145f9936cf9a725047",
+  "unit_tests_passed": 13,
+  "smoke_total_episodes": 480,
+  "smoke_independent_audit": {
+    "audited_episodes": 480,
+    "independently_recomputed_intervals": 480,
+    "source_hash": "736e6fa9fc4ed062e865fa786d5ba611a9369725a45c2a145f9936cf9a725047",
+    "all_expected_jobs_present": true,
+    "paired_warmup_and_schedule_match": true,
+    "service_subtraction_correct": true,
+    "accounting_failures": 0
+  },
+  "fullsize_run_check": {
+    "episodes": 2,
+    "n": 128,
+    "steps": 384,
+    "source_hash": "736e6fa9fc4ed062e865fa786d5ba611a9369725a45c2a145f9936cf9a725047",
+    "warmup_match": true,
+    "schedule_match": true,
+    "accounting_failures": 0,
+    "is_formal": false
+  },
+  "summary_tamper_detection_passed": true,
+  "resume_summary_check_passed": true,
+  "formal_3840_episode_stage_executed": false,
+  "smoke_performance_is_not_formal_evidence": true,
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0"
+}

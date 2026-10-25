@@ -1,0 +1,18 @@
+{
+  "version": "dynamic-demand-v1",
+  "n": 128, "tasks": 4, "scenario": "overlap", "family": "SP",
+  "steps": 384, "eval_start": 64, "prep": 32, "deadline": 32,
+  "blackout_starts": [64, 144, 224, 304], "blackout_duration": 32, "recovery_tail": 16,
+  "blackout_fraction": 0.1,
+  "profiles": ["normal", "spread", "fixed", "rotating"],
+  "capacities": [4096, 256], "main_period": 16, "sparse_period": 64,
+  "full_fractions": [0.0, 0.05, 0.1, 0.2],
+  "keep_fractions": [0.1, 0.25, 0.5, 0.75], "period_multipliers": [2, 4],
+  "development_seeds": [2710900000, 2710900001, 2710900002, 2710900003],
+  "evaluation_seeds": [2710901000, 2710901001, 2710901002, 2710901003, 2710901004, 2710901005, 2710901006, 2710901007, 2710901008, 2710901009, 2710901010, 2710901011],
+  "tolerance": 0.01, "value_audit": true, "save_agent_arrays": false,
+  "statistical_unit": "Independent seed; paired two-sided 95% Student-t intervals per endpoint and condition, not simultaneous.",
+  "calibration": "For each condition and family select the cheapest development configuration whose team, worst-task and worst-event paired loss upper limits are all <=0.01. Full family with no eligible configuration remains unqualified; simple families include the dense endpoint.",
+  "cost_scope": "Actual payload bit-hop served after warmup, including service for old queued messages, partial transmissions and eventually expired packets. Receiver-context acquisition and topology signaling are not charged.",
+  "policy_scope": "All methods share sensors, controller, routes, physical multicast, deadlines, balanced opportunity phases and exogenous blackout schedules. Blackout labels are evaluation-only. Simple rules do not use receiver beliefs or control scores. Diagnostic value samples do not feed any policy."
+}

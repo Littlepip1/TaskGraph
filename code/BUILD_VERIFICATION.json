@@ -1,0 +1,51 @@
+{
+  "source_hash": "9379e9e5aae107182ac6cadaa6a3f82e1da8ae9eb4ff0665deba54a2e891595f",
+  "unit_tests_passed": 12,
+  "smoke_development_episodes": 84,
+  "smoke_evaluation_episodes": 128,
+  "full_end_to_end_smoke_passed": true,
+  "exact_job_resume_passed": true,
+  "summarize_only_passed": true,
+  "large_integrity_checks": [
+    {
+      "n": 256,
+      "tasks": 2,
+      "elapsed": 58.28223136999986,
+      "accounting": 0,
+      "theory": {
+        "snapshot_bound_failures": 0,
+        "quota_failures": 0,
+        "offered_snapshot_sum": 8522272,
+        "snapshot_feasible_upper_sum": 8771136,
+        "counted_service_upper": 263055936,
+        "opportunity_service_upper": 1760428032,
+        "observed_K": 148,
+        "deadline_service_H": 33,
+        "notice": "observed K audits this run; it is not an a-priori scalability certificate"
+      },
+      "maintained_filters": 280
+    },
+    {
+      "n": 512,
+      "tasks": 16,
+      "elapsed": 19.06145680500049,
+      "accounting": 0,
+      "theory": {
+        "snapshot_bound_failures": 0,
+        "quota_failures": 0,
+        "offered_snapshot_sum": 6434208,
+        "snapshot_feasible_upper_sum": 6493344,
+        "counted_service_upper": 206346624,
+        "opportunity_service_upper": 904003584,
+        "observed_K": 38,
+        "deadline_service_H": 33,
+        "notice": "observed K audits this run; it is not an a-priori scalability certificate"
+      },
+      "maintained_filters": 560
+    }
+  ],
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "note": "Integrity verification only. The default 1788-episode performance study has NOT been run here."
+}
